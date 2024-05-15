@@ -77,13 +77,29 @@
  
 * Marketing Strategy
    * Integrated bike trip data for the years 2019 and 2020, consolidating datasets for comprehensive analysis.
-   * Identified discrepancies in zip code entries and resolved them by importing a comprehensive list of zip codes within Massachusetts.
-   * Performed a left join operation, retaining only the instances where zip codes matched those within Massachusetts, ensuring data accuracy and reliability.
+   * Identified discrepancies in zip code entries and resolved them by importing a comprehensive list of zip codes within and close proximity to Boston.
+   * Performed a left join operation, retaining only the instances where zip codes matched those within Boston, ensuring data accuracy and reliability.
    * Segregated the unified dataset into distinct customer and subscriber dataframes, enabling targeted analysis for each consumer segment.
    * Employed groupby operations on the dataframes, aggregating consumer counts by zip code to delineate the distribution of consumers across different regions.
    * Utilized size calculation to quantify the number of consumers within each zip code for both customers and subscribers.
    * Exported the segmented dataframes into Excel format to facilitate the creation of a geographic heatmap.
-   * The heatmap visually depicted the density of zip codes and the corresponding consumer counts, offering insights into the geographic distribution of customers and subscribers within Massachusetts.
+   * The heatmap visually depicted the density of zip codes and the corresponding consumer counts, offering insights into the geographic distribution of customers and subscribers within Boston.
+   * Also, Created a interactive plotly express heat map showing the most used bike stations by trip duration.
+   * Utilized the requests library to make an HTTP GET request to a routing API.
+   * Specified the URL of the API endpoint along with necessary query parameters such as waypoints (starting and ending coordinates) and mode of travel (bicycle).
+   * Provided required headers including the RapidAPI key and host information for authentication.
+   * Captured the response from the API request using response = requests.get(url, headers=headers, params=querystring).
+   * Route Map Creation Function (create_map(response)).
+   * Defined a function to create a route map using the coordinates extracted from the API response for the most used start and end station.
+   * Extracted latitude and longitude values from the JSON response and formatted them appropriately for plotting.
+   * Utilized the Plotly library to generate a line map figure based on the extracted coordinates.
+   * Creating my main map figure.
+   * Created a scatter map representing Boston Bike Share stations using Plotly.
+   * Added markers for each station, with marker size and color representing trip duration.
+   * Overlaying most used bicycle rout on main map
+   * Extracted the latitude and longitude values of the route from the route map trace data.
+   * Added the route as a line plot on the main map, using blue color to distinguish it from station markers.
+   * Combined the route and station maps into a single figure.
  
 
 
