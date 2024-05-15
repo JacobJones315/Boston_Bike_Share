@@ -96,7 +96,7 @@
    * Creating my main map figure.
    * Created a scatter map representing Boston Bike Share stations using Plotly.
    * Added markers for each station, with marker size and color representing trip duration.
-   * Overlaying most used bicycle rout on main map
+   * Overlaying most used bicycle route on main map
    * Extracted the latitude and longitude values of the route from the route map trace data.
    * Added the route as a line plot on the main map, using blue color to distinguish it from station markers.
    * Combined the route and station maps into a single figure.
