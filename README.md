@@ -34,17 +34,23 @@
  ## Procedure
 
  * Forecasting
-   * Imported bike trip data for the years 2019 and 2020, converting the 'starttime' column to datetime format.
+   * Imported bike trip data for the years 2019 and 2020, concatenanted the datasets together and converted the 'starttime' column to datetime format.
    * Segmented the data into separate dataframes for subscribers and customers.
-   * Extracted key features such as start times and utilized the Pandas grouper method coupled with count to aggregate weekly sales.
-   * Visualized the weekly sales data on a line graph, identifying observable trends and seasonality patterns.
+   * Extracted key features such as "starttimes" and utilized the Pandas grouper method coupled with count to aggregate weekly sales.
+   * Visualized the weekly sales data for both subscribers and customers on a line graph, identifying observable trends and seasonality patterns.
    * I imported the ExponentialSmoothing function from the statsmodel.tsa.holtwinters library.
    * Proceeded to construct separate additive and multiplicative trend and seasonality models to generate forecasts.
    * Calculated absolute percentage errors for actual and forecasted sales for each model.
    * Computed Mean Absolute Percentage Error (MAPE) to assess forecast accuracy, determining that the multiplicative trend and seasonality model outperformed the additive model.
    * Utilized the superior multiplicative model to forecast sales for both subscribers and customers 12 weeks into the future.
+   * Performed a linear regression analysis by importing the linear_model module from sklearn.
+   * Recognizing the strong influence of weather conditions on bike rides, integrated a dataset containing weather parameters like temperature and precipitation into our main dataframe, using 'day' as the key for joining.
+   * Used Customer/Subscriber sales as our independent variable and teperature and precipitation values as my dependent variables
+   * Extracted coefficients, intercept, R-squared value, as well as Absolute Percentage Error (APE) and Mean Absolute Percentage Error (MAPE) metrics to assess the performance of the linear regression model.
+   * Observed that the performance metrics, particularly MAPE, were lower than those achieved by the multiplicative trend and seasonality model, indicating a potentially inferior predictive capability of the linear regression model.
+
 * Optimization
-   * Imported bike trip data for the years 2019 and 2020, converting the 'starttime' column to datetime format.
+   * Imported bike trip data for the year 2020, converting the 'starttime' column to datetime format.
    * Converted start time into datetime format and extracted the hour.
    * Grouped my dataframe by key features such as start station id, start station name, month, day of week, and hour and found the size of the data frame which indicated the number of outgoing rides per hour from each station. Then found the number of trip counts per hour and the standard deviation for each hour
    * Grouped the trip data by start station, month, day of the week, and hour to calculate the number of trips leaving each station per hour (hourly_trips).
@@ -67,7 +73,18 @@
    * The subplot layout is arranged in a grid format using plt.subplot().
    * Plotted a line graph showing the variation of 'optimal_bikes_stock' (optimal number of bikes to stock) over hours of the day.
    * Used sns.lineplot() to create the line plot, specifying the x-axis as 'hour' and the y-axis as 'optimal_bikes_stock'.
-   * Call the function with a specific station ID and month plot_bike_stock_for_month(68, 2). 
+   * Call the function with a specific station ID and month plot_bike_stock_for_month(68, 2).
+ 
+* Marketing Strategy
+   * Integrated bike trip data for the years 2019 and 2020, consolidating datasets for comprehensive analysis.
+   * Identified discrepancies in zip code entries and resolved them by importing a comprehensive list of zip codes within Massachusetts.
+   * Performed a left join operation, retaining only the instances where zip codes matched those within Massachusetts, ensuring data accuracy and reliability.
+   * Segregated the unified dataset into distinct customer and subscriber dataframes, enabling targeted analysis for each consumer segment.
+   * Employed groupby operations on the dataframes, aggregating consumer counts by zip code to delineate the distribution of consumers across different regions.
+   * Utilized size calculation to quantify the number of consumers within each zip code for both customers and subscribers.
+   * Exported the segmented dataframes into Excel format to facilitate the creation of a geographic heatmap.
+   * The heatmap visually depicted the density of zip codes and the corresponding consumer counts, offering insights into the geographic distribution of customers and subscribers within Massachusetts.
+ 
 
 
 
