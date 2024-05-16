@@ -129,7 +129,7 @@
 
 ![](/images/Customer_Zipcodes.png)
 ![](/images/Subscriber_Zipcodes.png)
-![](/images/Customer_Subscriber_Ratio.png)
+![](/images/Customer_Subscriber_Ratio1.png)
 
 
 
