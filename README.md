@@ -84,7 +84,8 @@
    * Utilized size calculation to quantify the number of consumers within each zip code for both customers and subscribers.
    * Exported the segmented dataframes into Excel format to facilitate the creation of a geographic heatmap.
    * The heatmap visually depicted the density of zip codes and the corresponding consumer counts, offering insights into the geographic distribution of customers and subscribers within Boston.
-   * Also, Created a interactive plotly express heat map showing the most used bike stations by trip duration.
+   * Create a Customer-to-Subscriber Ratio to measure the density of customers to subscribers in each zip code. We will run targeted promotions is zip codes where this ratio is less than 50%
+   * Also, Created a interactive plotly express heat map showing the most used bike stations by trip duration to determine in adding pop up staions close by would be beneficial for the more busy stations.
    * Utilized the requests library to make an HTTP GET request to a routing API.
    * Specified the URL of the API endpoint along with necessary query parameters such as waypoints (starting and ending coordinates) and mode of travel (bicycle).
    * Provided required headers including the RapidAPI key and host information for authentication.
@@ -100,7 +101,36 @@
    * Extracted the latitude and longitude values of the route from the route map trace data.
    * Added the route as a line plot on the main map, using blue color to distinguish it from station markers.
    * Combined the route and station maps into a single figure.
- 
+
+ # Images
+
+## Data Visualization
+![](/images/Customer_Sales_2019.png)
+![](/images/Customer_Sales_2020.png)
+![](/images/Subscriber_Sales_2019.png)
+![](/images/Subscriber_Sales_2020.png)
+![](/images/Least_Used_Stations.png)
+![](/images/Most_Used_Stations.png)
+![](/images/Station_Usage.png)
+
+
+## Forecasting
+![](/images/Customer_ExpSmoothing.png)
+![](/images/Subscriber_ExpSmoothing.png)
+![](/images/Customer-Forecast.png)
+![](/images/Subscriber-Forecast.png)
+![](/images/Customer_Subscriber_Regression.png)
+
+
+## Optimization
+![](/images/Saftey_Stock_Optimization.png)
+
+## Marketing Strategy
+
+![](/images/Customer_Zipcodes.png)
+![](/images/Subscriber_Zipcodes.png)
+![](/images/Customer_Subscriber_Ratio.png)
+
 
 
 
