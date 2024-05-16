@@ -4,7 +4,7 @@ Created on Thu May  2 22:10:54 2024
 
 @author: Jacob Jones
 Date: 5/2/24
-
+"""
 import pandas as pd
 import numpy as np
 from scipy.stats import norm
